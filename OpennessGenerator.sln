@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpennessGenerator", "OpennessGenerator\OpennessGenerator.csproj", "{34A12260-882B-4429-B7FF-1FE3F937DE34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A12260-882B-4429-B7FF-1FE3F937DE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A12260-882B-4429-B7FF-1FE3F937DE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A12260-882B-4429-B7FF-1FE3F937DE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A12260-882B-4429-B7FF-1FE3F937DE34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB70578F-48D2-4885-B16C-8FD5407297DA}
+	EndGlobalSection
+EndGlobal

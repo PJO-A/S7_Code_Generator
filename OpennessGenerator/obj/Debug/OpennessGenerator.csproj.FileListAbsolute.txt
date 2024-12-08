@@ -1,0 +1,15 @@
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.csproj.AssemblyReference.cache
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\App.g.cs
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator_MarkupCompile.cache
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator_MarkupCompile.lref
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\OpennessGenerator.exe.config
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\OpennessGenerator.exe
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\OpennessGenerator.pdb
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\MainWindow.baml
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.g.resources
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.Properties.Resources.resources
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.csproj.GenerateResource.cache
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.csproj.CoreCompileInputs.cache
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.exe
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.pdb
