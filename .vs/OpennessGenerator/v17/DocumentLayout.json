@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\constructor\\objectidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\constructor\\objectidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -30,20 +30,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Controller.cs",
               "DocumentMoniker": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\Constructor\\Controller.cs",
               "RelativeDocumentMoniker": "OpennessGenerator\\Constructor\\Controller.cs",
               "ToolTip": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\Constructor\\Controller.cs",
               "RelativeToolTip": "OpennessGenerator\\Constructor\\Controller.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAwEYAAABPAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAwEYAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T07:01:29.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ObjectIdentifier.cs",
               "DocumentMoniker": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\Constructor\\ObjectIdentifier.cs",
               "RelativeDocumentMoniker": "OpennessGenerator\\Constructor\\ObjectIdentifier.cs",
@@ -73,7 +73,7 @@
               "RelativeDocumentMoniker": "OpennessGenerator\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\MainWindow.xaml.cs",
               "RelativeToolTip": "OpennessGenerator\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAEwF4AAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:40:30.219Z",
               "EditorCaption": ""

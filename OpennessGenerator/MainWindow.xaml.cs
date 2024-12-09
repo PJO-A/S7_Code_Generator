@@ -9,6 +9,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System;
+using System.Linq;
+using Siemens.Engineering.HW.Utilities;
 
 
 
@@ -84,7 +86,17 @@ namespace OpennessGenerator
                 project = portal.Projects.Create(path, tbPlcName.Text);
                 lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Project " + project.Name + " was created");
 
+                IoDevice(Controller.Device);
                 createDevices(project);
+
+                foreach(var a in project.UngroupedDevicesGroup.Devices)
+                {
+                    FindAttributeSet(a.DeviceItems, "Author", tbPlcAuthor.Text);
+                    FindAttributeSet(a.DeviceItems, "Comment", tbComment.Text + " " + a.Name);
+                }
+
+                AddToSubnet(Controller.Device, system);
+                SaveProject();
             }
         }
 
@@ -118,8 +130,86 @@ namespace OpennessGenerator
                 var device = project.Devices.CreateWithItem("OrderNumber: " + ObjectIdentifier.Identifier[a.identifier], a.name, a.name);
                 Devices.Add(device);
                 lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Device" + device.Name + " was created");
+
+                FindAttributeSet(device.DeviceItems, "Suthor", tbPlcAuthor.Text);
+                FindAttributeSet(device.DeviceItems, "Comment", tbComment.Text + " " + device.Name);
+
+                network = FindNetworkInterface(device.DeviceItems);
+                network.Nodes.Last().ConnectToSubnet(project.Subnets.Find("GlobalNetwork"));
+                network.Nodes.Last().SetAttribute("Address", a.ipAddress);
+            }
+            var controller = network.IoControllers.First();
+            if (controller == null) return;
+            system = controller.CreateIoSystem("GeneralSystem");
+        }
+
+        private void SaveProject()
+        {
+            if(project != null)
+            {
+                project.Save();
+                lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Project " + project.Name + " was saved");
             }
         }
+
+        private void IoDevice(IList<Tuple<Controller._Device, IList<Controller._IoCard>>> devices)
+        {
+            subDevice = new List<Device>();
+            var subnet = project.Subnets.Create("System:Subnet.Ethernet", "GlobalNetwork");
+            foreach(var d in devices)
+            {
+                var device = project.UngroupedDevicesGroup.Devices.CreateWithItem("OrderNumber:" + ObjectIdentifier.Identifier[d.Item1.identifier], d.Item1.name, d.Item1.name);
+                subDevice.Add(device);
+                FindAttributeSet(device.DeviceItems, "Suthor", tbPlcAuthor.Text);
+                FindAttributeSet(device.DeviceItems, "Comment", tbComment.Text + " " + device.Name);
+
+                FillIoController(device, d.Item2);
+                var network = FindNetworkInterface(device.DeviceItems);
+                network.Nodes.Last().ConnectToSubnet(subnet);
+            }
+        }
+
+        private void FillIoController(Device device, IList<Controller._IoCard> controller)
+        {
+            int index = 0;
+            DeviceItem rail = FindRail(device.DeviceItems);
+            foreach(var card in controller)
+            {
+                if (card.name.Equals(string.Empty)) continue;
+                for (int i=index; i<controller.Count; i++)
+                {
+                    if (!rail.CanPlugNew("OrderNumber:" + ObjectIdentifier.Identifier[card.identifier], card.name + " " + card.position, i)) continue;
+                    index = i;
+                    rail.PlugNew("OrderNumber:" + ObjectIdentifier.Identifier[card.identifier], card.name + "_" + card.position, i);
+                    break;
+                }
+            }
+        }
+
+        private void AddToSubnet(IList<Tuple<Controller. _Device, IList<Controller._IoCard>>> devices, IoSystem system)
+        {
+            foreach(var d in project.UngroupedDevicesGroup.Devices)
+            {
+                if(d.Name.Contains(tbPlcName.Text)) continue;
+
+                var network = FindNetworkInterface(d.DeviceItems);
+                network.IoConnectors.Last().ConnectToIoSystem(system);
+
+                foreach(var v in devices)
+                {
+                    if (d.Name.Equals(v.Item1.name) && !v.Item1.IP.Equals(string.Empty))
+                    {
+                        network.Nodes.First().SetAttribute("Address", v.Item1.IP);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
 
         #region Helper Function
 
