@@ -13,3 +13,8 @@ C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\Open
 C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.csproj.CoreCompileInputs.cache
 C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.exe
 C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\OpennessGenerator.pdb
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\Siemens.Engineering.dll
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\Siemens.Engineering.Hmi.dll
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\Siemens.Engineering.xml
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\bin\Debug\Siemens.Engineering.Hmi.xml
+C:\Users\TIA V19\source\repos\OpennessGenerator\OpennessGenerator\obj\Debug\Openness.F963D146.Up2Date

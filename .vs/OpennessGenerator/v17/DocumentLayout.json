@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|c:\\users\\tia v19\\source\\repos\\opennessgenerator\\opennessgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|c:\\users\\tia v19\\source\\repos\\opennessgenerator\\opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\constructor\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|c:\\users\\tia v19\\source\\repos\\opennessgenerator\\opennessgenerator\\constructor\\objectidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\opennessgenerator\\constructor\\objectidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34A12260-882B-4429-B7FF-1FE3F937DE34}|OpennessGenerator\\OpennessGenerator.csproj|solutionrelative:opennessgenerator\\constructor\\objectidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "OpennessGenerator\\Constructor\\Controller.cs",
               "ToolTip": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\Constructor\\Controller.cs",
               "RelativeToolTip": "OpennessGenerator\\Constructor\\Controller.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAADgv0YAAABPAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAAwEYAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T07:01:29.064Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "ToolTip": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\MainWindow.xaml",
               "RelativeToolTip": "OpennessGenerator\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-08T08:40:31.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T08:40:31.346Z"
             },
             {
               "$type": "Document",
@@ -74,7 +73,7 @@
               "RelativeDocumentMoniker": "OpennessGenerator\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\TIA V19\\source\\repos\\OpennessGenerator\\OpennessGenerator\\MainWindow.xaml.cs",
               "RelativeToolTip": "OpennessGenerator\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAADwv1EAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:40:30.219Z",
               "EditorCaption": ""

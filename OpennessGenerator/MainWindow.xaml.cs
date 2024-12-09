@@ -8,6 +8,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System;
 
 
 
@@ -57,6 +58,36 @@ namespace OpennessGenerator
             cbDelete.IsChecked = true;
 
         }
+
+        private void GenerateDevice()
+        {
+            if(Directory.Exists(tbPath.Text + tbPlcName.Text))
+            {
+                try
+                {
+                    if(cbDelete.IsChecked == true)
+                    {
+                        Directory.Delete(tbPath.Text + tbPlcName.Text, true);
+                        lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Project " + tbPlcName.Text + " was detected ");
+                    }
+                }
+                catch(Exception e)
+                {
+                    lbMessage.Items.Insert(0, DateTime.Now.ToString()+ " " + e.Message);
+                }
+                return;
+            }
+            using (portal = new TiaPortal(TiaPortalMode.WithUserInterface))
+            {
+                path = new DirectoryInfo(tbPath.Text);
+
+                project = portal.Projects.Create(path, tbPlcName.Text);
+                lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Project " + project.Name + " was created");
+
+                createDevices(project);
+            }
+        }
+
         private void createDevices(Project project)
         {
             Devices = new List<Device>();
@@ -81,11 +112,82 @@ namespace OpennessGenerator
                 comment = tbComment.Text,
             };
             addDev.Add(add);
+
+            foreach(var a in addDev)
+            {
+                var device = project.Devices.CreateWithItem("OrderNumber: " + ObjectIdentifier.Identifier[a.identifier], a.name, a.name);
+                Devices.Add(device);
+                lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Device" + device.Name + " was created");
+            }
         }
 
+        #region Helper Function
+
+        private DeviceItem FindRail(DeviceItemComposition devices)
+        {
+            foreach(var item in devices)
+            {
+                if (item.Name.Contains("Rack")) return item;
+                return FindRail(item.DeviceItems);
+            }
+            return null;
+        }
+        private NetworkInterface FindNetworkInterface(DeviceItemComposition devices)
+        {
+            NetworkInterface network = null;
+            foreach (var device in devices)
+            {
+                if (network != null) continue;
+                network = device.GetService<NetworkInterface>();
+                if  (network != null)
+                {
+                    if (FindAttributeGet(device, "InterfaceType") != "Ethernet") network = null;
+                    else if (network.Nodes == null) network = null;
+                    else if (network.Nodes.Count == 0) network = null;
+                }
+                if (network == null) network = FindNetworkInterface(device.DeviceItems);
+            }
+            return network;
+        }
+        private string  FindAttributeGet(DeviceItem device, string attribute)
+        {
+            var list = device.GetAttributeInfos();
+            foreach (var item in list) 
+            {
+                if (item.Name.Equals(attribute))
+                {
+                    return device.GetAttribute(attribute).ToString();
+                }
+            }
+            return string.Empty;
+        }
+
+        private string FindAttributeSet(DeviceItemComposition devices, string attribute, object value)
+        {
+            foreach (var d in devices)
+            {
+                var list = d.GetAttributeInfos();
+                foreach (var item in list)
+                {
+                    if (item.Name.Equals(attribute))
+                    {
+                        d.SetAttribute(attribute, value);
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+        #endregion
+
+        #region Events
         private void btnGenHw_Click(object sender, RoutedEventArgs e)
         {
-
+            if(project != null)
+            {
+                project.Save();
+                lbMessage.Items.Insert(0, DateTime.Now.ToString() + " Project " + project.Name + " was saved");
+            }
         }
 
         private void btnReloadCsv_Click(object sender, RoutedEventArgs e)
@@ -93,5 +195,6 @@ namespace OpennessGenerator
             ObjectIdentifier.ReadSettings(lbMessage);
             Controller.ReadSettings(lbMessage);
         }
+        #endregion
     }
 }
